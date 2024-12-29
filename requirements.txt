@@ -1,2 +1,10 @@
 ipywidgets
 kaggle
+numpy
+pandas
+seaborn
+matplotlib
+plotly
+nltk
+scikit-learn
+wordcloud
