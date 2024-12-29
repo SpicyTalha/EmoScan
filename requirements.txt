@@ -11,3 +11,4 @@ wordcloud
 nbformat
 notebook
 kaleido
+prettytable
