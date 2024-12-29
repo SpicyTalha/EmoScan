@@ -8,3 +8,6 @@ plotly
 nltk
 scikit-learn
 wordcloud
+nbformat
+notebook
+kaleido
