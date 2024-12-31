@@ -1,17 +1,111 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-</head>
-<body style="background-color:powderblue;">
-<form action = "http://127.0.0.1:5000/predict" method = "POST">
-   <div class="vertical-center">
-   <h1 style="background-color:Orange">Check Sentiment value for movie review</h1>
-   </div>
-   <p>Review <input type = "text" name = "review" /></p>
-   <p><input type = "submit" value = "Check Sentiment" /></p>
-   <p style="font-size:48px">
-&#128512; &#128516; &#128517; &#128514;
-</form>
-</body> 
-</html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentiment Analysis</title>
+  <style>
+    body {
+      background-color: #fafafa;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #fff;
+      background-color: #ff6f61;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      letter-spacing: 1.5px;
+    }
+
+    .input-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    input[type="text"] {
+      padding: 12px;
+      font-size: 18px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #ff6f61;
+      box-shadow: 0 0 8px rgba(255, 111, 97, 0.7);
+    }
+
+    input[type="submit"] {
+      padding: 15px 25px;
+      font-size: 18px;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ff3d3b;
+    }
+
+    .emoji {
+      font-size: 50px;
+      margin-top: 30px;
+    }
+
+    .emoji span {
+      margin: 0 5px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      input[type="text"], input[type="submit"] {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Check Sentiment for Movie Review</h1>
+    <form action="http://127.0.0.1:5000/predict" method="POST">
+      <div class="input-box">
+        <label for="review" style="font-size: 18px; font-weight: bold; color: #333;">Enter Movie Review:</label>
+        <input type="text" name="review" id="review" required placeholder="Type the review here..." />
+        <input type="submit" value="Check Sentiment" />
+      </div>
+    </form>
+  </div>
+</body>
+</html>

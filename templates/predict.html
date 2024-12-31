@@ -1,32 +1,115 @@
 <!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentiment Analysis Result</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 36px;
+      color: #fff;
+      background-color: #ff5a5f;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #ff5a5f;
+      background-color: #ff9f80;
+      color: white;
+      font-size: 18px;
+    }
+
+    th {
+      background-color: #ff4040;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      background-color: #ff5a5f;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff4040;
+    }
+
+    .emoji {
+      font-size: 48px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      table {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
-<style>
-table, th, td {
-  border:1px solid black;
-}
-th, td {
-  background-color: #ffa500;
-}
-</style>
-<body style="background-color:powderblue;">
-<div class="vertical-center">
-<h2 style="background-color:Orange" >Sentiment Analyzer Engine Output</h2>
- <table style="width:100%">
-  <tr>
-    <td>Predition Label</td>
-    <td>Sentiment</td>
-  </tr>
-  <tr>
-    <td>{{pred}}</td>
-    <td>{{sent}}</td>
-  </tr>
-</table>
- <p style="font-size:48px">
-&#128512; &#128516; &#128517; &#128514;
-</p>
-  <p align="center"><button onclick="history.back()">Go Back</button></p>
+<body>
+
+  <div class="container">
+    <h2> Sentiment Analysis Result </h2>
+    <table>
+      <tr>
+        <th>Prediction Label</th>
+        <th>Sentiment</th>
+      </tr>
+      <tr>
+        <td>{{pred}}</td>
+        <td>{{sent}}</td>
+      </tr>
+    </table>
+    <div class="button-container">
+      <button onclick="history.back()">Go Back</button>
+    </div>
+  </div>
+
 </body>
 </html>
- 
