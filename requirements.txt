@@ -12,3 +12,4 @@ nbformat
 notebook
 kaleido
 prettytable
+flask
